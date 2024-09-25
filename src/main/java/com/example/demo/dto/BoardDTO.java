@@ -27,7 +27,8 @@ public class BoardDTO {
     private String title;   //제목
 
 
-    @NotEmpty
+    @NotEmpty(message = "작성안됬으니 다시 작성하시오")
+    @Size(min = 5, max = 1000)
     private String content;
 
 
